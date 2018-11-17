@@ -103,7 +103,22 @@ int main(){
   
   int angulos[7] = { 10, 20, 30, 40, 50, 60, 70 }; 
   ofstream outfile2("Angulos.txt");
-  
+  for(int i=0; i<7; i++){
+	double angulo = angulos[i];
+	double h = 0.1;
+    double x=0;
+    double y=0;
+    double t=0;
+    double x_dev= 300*cos(angulo*PI/180);
+    double y_dev= 300*sin(angulo*PI/180);
+    while(y>=0){
+    outfile2 << t <<" " << x << " " << y << " " << x_dev << " " << y_dev <<endl;		
+	cout <<    t <<" " << x << " " << y << " " << x_dev << " " << y_dev <<endl;
+    rungeKutta_4(&x, &y, &x_dev, &y_dev, h);
+  }
+  outfile.close();
+
+}
 	return 0;
 }
 
