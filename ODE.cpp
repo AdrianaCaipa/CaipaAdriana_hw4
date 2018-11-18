@@ -15,7 +15,7 @@ double dxdt(double t, double x, double x_dev);
 double dydt(double t, double y, double y_dev);
 double dxdt2(double t, double x, double angulo,double x_dev);
 double dydt2(double t, double y, double angulo, double y_dev);
-void rungeKutta_4(double *x, double *y, double *z, double h);
+void rungeKutta_4(double *x, double *y, double *x_dev,double *y_dev, double h);
 
 
 double dxdt(double t, double x, double x_dev){
