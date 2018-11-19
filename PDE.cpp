@@ -24,9 +24,20 @@ int main(){
       for (int j=0; j<tamanio; j++) d[i][j] = 0;
     }
     
+    
 	for(int i=0; i<tamanio; i++) d[i][0] = 100.0;
 	
-	
+	for (int iteraciones = 0; iteraciones < tamanio; iteraciones++){// iteraciones
+		
+		for (int i = 1; i < (tamanio - 1); i++){ //direccion-x
+			
+			for (int j = 1; j < (tamanio - 1); j++){ //direccion-y
+			
+				d[i][j] = 0.25*(d[i+1][j]+d[i-1][j]+d[i][j+1]+d[i][j-1]);
+				
+			}
+		} 
+	}
 	return 0;
 }
 
