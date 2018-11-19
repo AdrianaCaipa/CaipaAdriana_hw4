@@ -49,47 +49,52 @@ i,j=np.meshgrid(mesh, mesh)
 figura=plt.figure()
 eje=Axes3D(figura)
 eje.plot_surface(i,j,temp_f[:50,:],cmap =colormap,rstride=1,cstride=1)
+plt.savefig("Temperatura_f.png")
 
 
 figura=plt.figure()
 eje=Axes3D(figura)
 eje.plot_surface(i,j,temp_f[1500:1500+50,:],cmap =colormap,rstride=1,cstride=1)
+plt.savefig("Temperatura_estadof.png")
 
 
 figura=plt.figure()
 eje=Axes3D(figura)
 eje.plot_surface(i,j,temp_f[2000:2000+50,:],cmap =colormap,rstride=1,cstride=1)
+plt.savefig("Temperatura_estado2f.png")
 
 
 figura=plt.figure()
 eje=Axes3D(figura)
 eje.plot_surface(i,j,temp_f[-50:,:],cmap =colormap,rstride=1,cstride=1)
-#plt.show()
+plt.savefig("Temperatura_estadofinf.png")
+
 ####Segundagrafica3D
 
-colormap1='seismic'
+colormap1='gist_rainbow'
 temp_p=np.genfromtxt('Temperatura_p.txt')
 mesh = np.linspace(0,0.5,50)
 i,j=np.meshgrid(mesh, mesh)
 figura=plt.figure()
 eje=Axes3D(figura)
 eje.plot_surface(i,j,temp_p[:50,:],cmap =colormap1,rstride=1,cstride=1)
-
+plt.savefig("Temperatura_p.png")
 
 figura=plt.figure()
 eje=Axes3D(figura)
 eje.plot_surface(i,j,temp_p[2500:2500+50,:],cmap =colormap1,rstride=1,cstride=1)
-
+plt.savefig("Temperatura_estado1p.png")
 
 figura=plt.figure()
 eje=Axes3D(figura)
 eje.plot_surface(i,j,temp_p[3000:3000+50,:],cmap =colormap1,rstride=1,cstride=1)
-
+plt.savefig("Temperatura_estado2p.png")
 
 figura=plt.figure()
 eje=Axes3D(figura)
 eje.plot_surface(i,j,temp_p[-50:,:],cmap =colormap1,rstride=1,cstride=1)
-plt.show()
+plt.savefig("Temperatura_estadofinp.png")
+
 ######TerceraGrafica
 temp_l=np.genfromtxt('Temperatura_l.txt')
 colormap2='Spectral'
@@ -99,19 +104,19 @@ i,j=np.meshgrid(mesh, mesh)
 figura=plt.figure()
 eje=Axes3D(figura)
 eje.plot_surface(i,j,temp_p[:50,:],cmap =colormap2,rstride=1,cstride=1)
-
+plt.savefig("Temperatura_l.png")
 
 figura=plt.figure()
 eje=Axes3D(figura)
 eje.plot_surface(i,j,temp_p[2500:2500+50,:],cmap =colormap2,rstride=1,cstride=1)
-
+plt.savefig("Temperatura_estadol.png")
 
 figura=plt.figure()
 eje=Axes3D(figura)
 eje.plot_surface(i,j,temp_p[3000:3000+50,:],cmap =colormap2,rstride=1,cstride=1)
-
+plt.savefig("Temperatura_estado2l.png")
 
 figura=plt.figure()
 eje=Axes3D(figura)
 eje.plot_surface(i,j,temp_p[-50:,:],cmap =colormap2,rstride=1,cstride=1)
-plt.show()
+plt.savefig("Temperatura_finl.png")
